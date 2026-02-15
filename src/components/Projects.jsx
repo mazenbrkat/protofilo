@@ -1,5 +1,7 @@
-import { Link } from "react-router-dom";
+import { useState } from "react";
 import "./project.css";
+
+const getImagePath = (imageName) => `${process.env.PUBLIC_URL}/${imageName}`;
 
 const projectsData = [
   {
@@ -9,7 +11,7 @@ const projectsData = [
     details:
       "project talk about adding tools security google authentication , and dos and sql injaction with know using mongodb.",
     tech: ["React", "Node.js", "Tailwind CSS","Mongodb"],
-    images: ["/login.jpeg", "/register.jpeg", "/order1.jpeg", "/dashboard.jpeg"],
+    images: [getImagePath("login.jpeg"), getImagePath("register.jpeg"), getImagePath("order1.jpeg"), getImagePath("dashboard.jpeg")],
   },
   {
     id: 2,
@@ -18,11 +20,13 @@ const projectsData = [
     details:
       "Dashboard system for managing orders, menus, services and customer requests with responsive design and scalable components.",
     tech: ["React", "Tailwind CSS"],
-    images: ["/home.png", "/service.jpeg", "/order.jpeg", "/menu.jpeg"],
+    images: [getImagePath("home.png"), getImagePath("menu.jpeg"), getImagePath("order.jpeg"), getImagePath("dashboard.jpeg")],
   },
 ];
 
 const Projects = () => {
+  const [selected, setSelected] = useState(null);
+
   return (
     <section id="projects" className="projects">
       <div className="projects-container">
@@ -47,18 +51,53 @@ const Projects = () => {
                   ))}
                 </div>
 
-                {/* ✅ View Details Link */}
-                <Link
-                  to={`/project/${project.id}`}
+                {/* ✅ View Details Button */}
+                <button 
                   className="details-btn"
+                  onClick={() => setSelected(project)}
                 >
                   View Details
-                </Link>
+                </button>
               </div>
             </div>
           ))}
         </div>
       </div>
+
+      {/* Modal */}
+      {selected && (
+        <div 
+          className="modal-overlay" 
+          onClick={() => setSelected(null)}
+        >
+          <div 
+            className="modal"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button 
+              className="modal-close"
+              onClick={() => setSelected(null)}
+            >
+              ✕
+            </button>
+            
+            <h3>{selected.title}</h3>
+            <p>{selected.details}</p>
+
+            <div className="tech-list">
+              {selected.tech.map((t, i) => (
+                <span key={i}>{t}</span>
+              ))}
+            </div>
+
+            <div className="modal-images">
+              {selected.images.map((img, i) => (
+                <img key={i} src={img} alt={`${selected.title} ${i + 1}`} />
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 };

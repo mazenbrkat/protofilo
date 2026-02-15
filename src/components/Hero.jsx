@@ -1,4 +1,5 @@
 import "./hero.css";
+import mazenImage from "../assets/mazen.jpeg";
 
 const Hero = () => {
   return (
@@ -42,7 +43,7 @@ const Hero = () => {
 
         {/* Right Image */}
         <div className="hero-image">
-          <img src="/mazen.jpeg" alt="Mazen Mohamed" />
+          <img src={mazenImage} alt="Mazen Mohamed" />
         </div>
 
       </div>
