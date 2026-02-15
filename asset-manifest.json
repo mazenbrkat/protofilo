@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/protofilo/static/css/main.99dd1233.css",
+    "main.js": "/protofilo/static/js/main.ecdce4a3.js",
+    "static/js/453.20359781.chunk.js": "/protofilo/static/js/453.20359781.chunk.js",
+    "index.html": "/protofilo/index.html",
+    "main.99dd1233.css.map": "/protofilo/static/css/main.99dd1233.css.map",
+    "main.ecdce4a3.js.map": "/protofilo/static/js/main.ecdce4a3.js.map",
+    "453.20359781.chunk.js.map": "/protofilo/static/js/453.20359781.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.99dd1233.css",
+    "static/js/main.ecdce4a3.js"
+  ]
+}
