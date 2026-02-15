@@ -1,0 +1,66 @@
+import { Link } from "react-router-dom";
+import "./project.css";
+
+const projectsData = [
+  {
+    id: 1,
+    title: "Secure Website",
+    description: "A secure web application with Google authentication, DOS protection, and SQL injection prevention using MongoDB.",
+    details:
+      "project talk about adding tools security google authentication , and dos and sql injaction with know using mongodb.",
+    tech: ["React", "Node.js", "Tailwind CSS","Mongodb"],
+    images: ["/login.jpeg", "/register.jpeg", "/order1.jpeg", "/dashboard.jpeg"],
+  },
+  {
+    id: 2,
+    title: "Restaurant Management System",
+    description: "Order, menu and services web application.",
+    details:
+      "Dashboard system for managing orders, menus, services and customer requests with responsive design and scalable components.",
+    tech: ["React", "Tailwind CSS"],
+    images: ["/home.png", "/service.jpeg", "/order.jpeg", "/menu.jpeg"],
+  },
+];
+
+const Projects = () => {
+  return (
+    <section id="projects" className="projects">
+      <div className="projects-container">
+        <h2>Projects</h2>
+
+        <div className="projects-grid">
+          {projectsData.map((project) => (
+            <div className="project-card" key={project.id}>
+              <img
+                src={project.images[0]}
+                alt={project.title}
+                className="project-img"
+              />
+
+              <div className="project-body">
+                <h4>{project.title}</h4>
+                <p>{project.description}</p>
+
+                <div className="tech-list">
+                  {project.tech.map((t, i) => (
+                    <span key={i}>{t}</span>
+                  ))}
+                </div>
+
+                {/* ✅ View Details Link */}
+                <Link
+                  to={`/project/${project.id}`}
+                  className="details-btn"
+                >
+                  View Details
+                </Link>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Projects;
