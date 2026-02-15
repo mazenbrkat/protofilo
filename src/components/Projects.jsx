@@ -20,7 +20,7 @@ const projectsData = [
     details:
       "Dashboard system for managing orders, menus, services and customer requests with responsive design and scalable components.",
     tech: ["React", "Tailwind CSS"],
-    images: [getImagePath("home.png"), getImagePath("menu.jpeg"), getImagePath("order.jpeg"), getImagePath("dashboard.jpeg")],
+    images: [getImagePath("home.png"), getImagePath("menu.jpeg"), getImagePath("order.jpeg"), getImagePath("service.jpeg")],
   },
 ];
 
