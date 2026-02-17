@@ -1,125 +1,39 @@
+/* About Section */
 .about {
-  padding: 80px 20px;
   background: #ffffff;
 }
 
-.about-container {
-  max-width: 900px;
-  margin: auto;
-  text-align: center;
-}
-
-.about h2 {
-  font-size: 32px;
-  font-weight: 700;
-  color: #111827;
-  margin-bottom: 20px;
-}
-
-.about p {
-  font-size: 16px;
-  color: #6b7280;
-  line-height: 1.8;
-  margin-bottom: 16px;
-}
-.about {
-  padding: 80px 20px;
-  background: #ffffff;
-}
-.about-lead span {
+.about-hero span {
   color: #ff6a2a;
   font-weight: 600;
 }
-.about-container {
-  max-width: 900px;
-  margin: auto;
-}
-
-/* Titles */
 .about h2 {
-  font-size: 32px;
-  font-weight: 700;
-  margin-bottom: 20px;
+  font-size: 36px;
+  color: #111827;
 }
-
 .about h3 {
   font-size: 22px;
-  margin-bottom: 16px;
-  margin-top: 40px;
+  color: #111827;
 }
-
-/* Paragraphs */
-.about p {
-  color: #6b7280;
-  line-height: 1.8;
-  margin-bottom: 16px;
-}
-
-/* Sections */
-.about-section {
-  margin-top: 32px;
-}
-
-/* Education */
-.education-card {
-  background: #f9fafb;
+/* Tech badges */
+.badge.bg-light {
   border: 1px solid #e5e7eb;
-  border-radius: 16px;
-  padding: 20px;
-}
-
-.education-card h4 {
-  margin-bottom: 4px;
-}
-
-.education-card span {
-  color: #ff6a2a;
-  font-weight: 600;
-}
-
-.education-card p {
-  margin-top: 6px;
-  font-size: 14px;
-}
-
-/* Technologies */
-.tech-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-}
-
-.tech-grid span {
-  background: #ffe8d6;
-  color: #ff6a2a;
-  padding: 6px 14px;
-  border-radius: 999px;
-  font-size: 14px;
   font-weight: 500;
 }
-
-/* Certifications */
-.cert-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 20px;
+.card.border-warning {
+  border-width: 2px;
+  border-radius: 16px;
 }
-
-.cert-grid img {
-  width: 100%;
-  border-radius: 14px;
+.badge.bg-light {
   border: 1px solid #e5e7eb;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  font-weight: 500;
 }
-
-.cert-grid img:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.08);
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .about {
-    padding: 60px 16px;
-  }
+.about-hero h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: #ff6a2a;
+  margin: 14px auto 0;
+  border-radius: 999px;
 }

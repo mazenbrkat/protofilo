@@ -1,54 +1,27 @@
+/* Contact Section */
 .contact {
-  padding: 80px 20px;
-  background: #f9fafb;
-}
-
-.contact-container {
-  max-width: 1100px;
-  margin: auto;
-  text-align: center;
-}
-
-.contact h2 {
-  font-size: 32px;
-  margin-bottom: 12px;
-}
-
-.contact-desc {
-  color: #6b7280;
-  margin-bottom: 40px;
-}
-
-/* Grid */
-.contact-info-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 28px;
-}
-
-/* Card */
-.contact-card {
   background: #ffffff;
-  padding: 32px;
-  border-radius: 20px;
-  border: 1px solid #e5e7eb;
+}
+
+/* Contact Cards */
+.card.border-warning {
+  border: 2px solid #ffc107 !important;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.contact-card:hover {
+.card.border-warning:hover {
   transform: translateY(-6px);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+  box-shadow: 0 20px 40px rgba(255, 106, 42, 0.15);
 }
 
-.contact-card .icon {
-  font-size: 28px;
+.card i {
+  transition: color 0.2s ease;
 }
 
-.contact-card h4 {
-  margin-top: 12px;
-  font-size: 18px;
-  font-weight: 600;
+.card.border-warning:hover i {
+  color: #ff6a2a !important;
 }
+
 
 .contact-card p {
   margin-top: 6px;

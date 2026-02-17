@@ -18,7 +18,7 @@ const projectsData = [
         "Implemented SQL injection prevention techniques in the backend.",
       ],
     tech: ["React", "Node.js", "Tailwind CSS","Mongodb"],
-    images: ["/login.jpeg", "/register.jpeg", "/order1.jpeg", "/dashboard.jpeg"],
+    images: ["login.jpeg", "register.jpeg", "order1.jpeg", "dashboard.jpeg"],
   },
   {
     id: 2,
@@ -31,7 +31,7 @@ const projectsData = [
       ],
       Myrole:["Designed and implemented the dashboard UI.", ],
     tech: ["React", "Tailwind CSS"],
-    images: ["/home.png", "/service.jpeg", "/order.jpeg", "/menu.jpeg"],
+    images: ["home.png", "service.jpeg", "order.jpeg", "menu.jpeg"],
   },
 ];
 
@@ -71,7 +71,7 @@ const ProjectDetails = () => {
 
         <div className="details-gallery">
           {project.images.map((img, i) => (
-            <img key={i} src={img} alt="Project" />
+            <img key={i} src={`${process.env.PUBLIC_URL}/${img}`} alt="Project" />
           ))}
         </div>
 

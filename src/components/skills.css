@@ -1,52 +1,47 @@
 .skills {
-  padding: 80px 20px;
   background: #f9fafb;
 }
 
-.skills-container {
-  max-width: 1100px;
-  margin: auto;
-}
-
-.skills h2 {
+/* Title */
+.skills-title {
   text-align: center;
-  font-size: 32px;
+  font-size: 36px;
   font-weight: 700;
   color: #111827;
-  margin-bottom: 40px;
-}
-
-/* Grid */
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 24px;
+  margin-bottom: 48px;
 }
 
 /* Card */
 .skill-card {
   background: #ffffff;
-  border-radius: 16px;
-  padding: 24px;
+  border-radius: 18px;
+  padding: 28px 20px;
   text-align: center;
   border: 1px solid #e5e7eb;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .skill-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
 }
 
-.skill-card h4 {
+/* Skill Name */
+.skill-card h5 {
   font-size: 18px;
   font-weight: 600;
   color: #111827;
-  margin-bottom: 8px;
+  margin-bottom: 12px;
 }
 
-.skill-card span {
-  font-size: 14px;
+/* Level Badge */
+.skill-level {
+  display: inline-block;
+  background: #ffe8d6;
   color: #ff6a2a;
+  padding: 6px 16px;
+  border-radius: 999px;
+  font-size: 14px;
   font-weight: 500;
 }
+

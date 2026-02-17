@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { Link } from "react-router-dom";
 import "./project.css";
 
 const getImagePath = (imageName) => `${process.env.PUBLIC_URL}/${imageName}`;
@@ -25,7 +25,6 @@ const projectsData = [
 ];
 
 const Projects = () => {
-  const [selected, setSelected] = useState(null);
 
   return (
     <section id="projects" className="projects">
@@ -52,52 +51,20 @@ const Projects = () => {
                 </div>
 
                 {/* ✅ View Details Button */}
-                <button 
+                <Link 
+                  to={`/projects/${project.id}`}
                   className="details-btn"
-                  onClick={() => setSelected(project)}
+                  style={{ textDecoration: "none", display: "inline-block" }}
                 >
                   View Details
-                </button>
+                </Link>
               </div>
             </div>
           ))}
         </div>
       </div>
 
-      {/* Modal */}
-      {selected && (
-        <div 
-          className="modal-overlay" 
-          onClick={() => setSelected(null)}
-        >
-          <div 
-            className="modal"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <button 
-              className="modal-close"
-              onClick={() => setSelected(null)}
-            >
-              ✕
-            </button>
-            
-            <h3>{selected.title}</h3>
-            <p>{selected.details}</p>
-
-            <div className="tech-list">
-              {selected.tech.map((t, i) => (
-                <span key={i}>{t}</span>
-              ))}
-            </div>
-
-            <div className="modal-images">
-              {selected.images.map((img, i) => (
-                <img key={i} src={img} alt={`${selected.title} ${i + 1}`} />
-              ))}
-            </div>
-          </div>
-        </div>
-      )}
+      {/* Modal تم حذفه - التفاصيل أصبحت في صفحة منفصلة */}
     </section>
   );
 };

@@ -1,12 +1,13 @@
+/* Footer */
 .footer {
-  background: #020617;
-  margin-top: 80px;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
 }
 
-.footer-bottom {
-  text-align: center;
-  padding: 20px;
-  font-size: 13px;
-  color: #9ca3af;
-  border-top: 1px solid rgba(255,255,255,0.08);
+.footer p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.footer .text-warning {
+  color: #ff6a2a !important;
 }

@@ -1,3 +1,4 @@
+import { Container, Row, Col } from "react-bootstrap";
 import "./skills.css";
 
 const skills = [
@@ -13,19 +14,21 @@ const skills = [
 
 const Skills = () => {
   return (
-    <section id="skills" className="skills">
-      <div className="skills-container">
-        <h2>Skills</h2>
+    <section id="skills" className="skills py-5">
+      <Container>
+        <h2 className="skills-title">Skills</h2>
 
-        <div className="skills-grid">
+        <Row className="gy-4 justify-content-center">
           {skills.map((skill, index) => (
-            <div className="skill-card" key={index}>
-              <h4>{skill.name}</h4>
-              <span>{skill.level}</span>
-            </div>
+            <Col key={index} xs={12} sm={6} lg={3}>
+              <div className="skill-card">
+                <h5>{skill.name}</h5>
+                <span className="skill-level">{skill.level}</span>
+              </div>
+            </Col>
           ))}
-        </div>
-      </div>
+        </Row>
+      </Container>
     </section>
   );
 };
