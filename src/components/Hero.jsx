@@ -1,5 +1,5 @@
 import "./hero.css";
-import mazenImage from "../assets/mazen.jpeg";
+import mazenImage from "../assets/Mazen.jpeg";
 
 const Hero = () => {
   return (
