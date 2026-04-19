@@ -33,6 +33,27 @@ const projectsData = [
     tech: ["React", "Tailwind CSS"],
     images: ["home.png", "service.jpeg", "order.jpeg", "menu.jpeg"],
   },
+  {
+    id: 3,
+    title: "Menu Management System",
+    details:
+      "Project for Our Menu Collection to show details to meals,you will button to show many meals foods ,you can show it on youtube how cook it and Light & Dark Modes as feature  .",
+    features: [
+      "Menu Collection: Display a collection of meals with details.",
+      "Meal Details: Show detailed information about each meal.",
+      "YouTube Integration: Watch cooking tutorials on YouTube.",
+      "Light & Dark Modes: Toggle between light and dark themes.",
+    ],
+    Myrole: [
+      "Developed the menu collection interface.",
+      "Implemented meal details display.",
+      "Integrated YouTube videos for cooking tutorials.",
+      "Added light and dark mode functionality.",
+    ],
+    tech: ["Javascript", "HTML", "CSS", "Bootstrap"],
+    URL: "https://mazenbrkat.github.io/Meal-Recipe-App/",
+    images: ["Menu Collections.png", "Details.png", "More Details.png", "Darkmode.png"],
+  },
 ];
 
 const ProjectDetails = () => {
@@ -67,7 +88,21 @@ const ProjectDetails = () => {
           {project.Myrole && project.Myrole.map((r, i) => (
             <li key={i}>{r}</li>
           ))}
-        </ul>  
+        </ul>
+
+        {project.URL && (
+          <div style={{ margin: "20px 0" }}>
+            <a 
+              href={project.URL} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="details-btn"
+              style={{ textDecoration: "none", display: "inline-block" }}
+            >
+              View Live Project
+            </a>
+          </div>
+        )}
 
         <div className="details-gallery">
           {project.images.map((img, i) => (

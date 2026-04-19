@@ -10,7 +10,7 @@ const projectsData = [
     description: "A secure web application with Google authentication, DOS protection, and SQL injection prevention using MongoDB.",
     details:
       "project talk about adding tools security google authentication , and dos and sql injaction with know using mongodb.",
-    tech: ["React", "Node.js", "Tailwind CSS","Mongodb"],
+    tech: ["React","Node.js","Tailwind CSS","Mongodb"],
     images: [getImagePath("login.jpeg"), getImagePath("register.jpeg"), getImagePath("order1.jpeg"), getImagePath("dashboard.jpeg")],
   },
   {
@@ -22,6 +22,15 @@ const projectsData = [
     tech: ["React", "Tailwind CSS"],
     images: [getImagePath("home.png"), getImagePath("menu.jpeg"), getImagePath("order.jpeg"), getImagePath("service.jpeg")],
   },
+  {
+    id: 3,
+    title: "Menu Management System",
+    description: "Menu and details of meals  web application.",
+    details:
+      "Project for Our Menu Collection to show details to meals,you will button to show many meals foods ,you can show it on youtube how cook it and Light & Dark Modes as feature  .",
+    tech: ["Javascript", "HTML", "CSS", "Bootstrap"],
+    images: [getImagePath("Menu Collections.png"), getImagePath("Details.png"), getImagePath("More Details.png"), getImagePath("Darkmode.png")],
+},
 ];
 
 const Projects = () => {
