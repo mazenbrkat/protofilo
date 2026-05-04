@@ -54,6 +54,30 @@ const projectsData = [
     URL: "https://mazenbrkat.github.io/Meal-Recipe-App/",
     images: ["Menu Collections.png", "Details.png", "More Details.png", "Darkmode.png"],
   },
+  {
+    id: 4,
+    title: "Cook & Learn – Full Stack Recipe Platform",
+    details:
+      "Cook & Learn is a full stack recipe platform that allows users to create and discover recipes. It features user authentication, recipe management, and interactive features such as comments and ratings.",
+    features: [
+      "Recipe browsing with search and filtering",
+      "Add/remove favorites with real-time updates",
+      "User authentication via Google OAuth",
+      "Profile management with image upload",
+      "Comments and ratings system",
+      "Admin dashboard for managing recipes and users",
+      "Responsive UI with modern design",
+      "RESTful API integration with Node.js and MongoDB",
+    ],
+    Myrole: [
+       "Developed a full-stack cooking web application using React.js and Node.js.",
+       "Built responsive and user-friendly interfaces for browsing recipes.",
+       "Added Google OAuth authentication for secure login.",
+       "Created features like favorites, search, and filtering.",
+    ],
+    tech: ["React", "Node.js", "Express", "MongoDB", "Bootstrap"],
+    images: ["cooklearn1.png", "cooklearn2.png", "cooklearn3.png", "cooklearn4.png","cooklearn5.png","cooklearn6.png"],
+  }
 ];
 
 const ProjectDetails = () => {
@@ -78,7 +102,7 @@ const ProjectDetails = () => {
         </ul>
           <h3>Technologies used:</h3>
         <div className="tech-list">
-          {project.tech.map((t, i) => (
+          {project?.tech?.map((t, i) => (
             <span key={i}>{t}</span>
           ))}
         </div>

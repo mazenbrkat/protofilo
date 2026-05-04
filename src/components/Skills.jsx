@@ -10,6 +10,8 @@ const skills = [
   { name: "Responsive Design", level: "Advanced" },
   { name: "UI / UX Design", level: "Good Knowledge" },
   { name: "Git & GitHub", level: "Intermediate" },
+  { name: "Node.js (Basic)", level: "Basic" },
+  { name: "MongoDB (Basic)", level: "Basic" },
 ];
 
 const Skills = () => {

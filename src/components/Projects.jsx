@@ -31,6 +31,15 @@ const projectsData = [
     tech: ["Javascript", "HTML", "CSS", "Bootstrap"],
     images: [getImagePath("Menu Collections.png"), getImagePath("Details.png"), getImagePath("More Details.png"), getImagePath("Darkmode.png")],
 },
+{
+  id: 4,
+  title: "Cook & Learn – Full Stack Recipe Platform",
+  description: "A full stack recipe platform with user authentication, recipe management, and interactive features.",
+  details:
+    "Cook & Learn is a full stack recipe platform that allows users to create and discover recipes. It features user authentication, recipe management, and interactive features such as comments and ratings.",
+  tech: ["React", "Node.js", "Express", "MongoDB", "Bootstrap"],
+  images: [getImagePath("cooklearn1.png"), getImagePath("cooklearn2.png"), getImagePath("cooklearn3.png"), getImagePath("cooklearn4.png"),getImagePath("cooklearn5.png"),getImagePath("cooklearn6.png")],
+}
 ];
 
 const Projects = () => {
